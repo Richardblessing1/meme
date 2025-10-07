@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">😂 Meme Generator</h1>
+
+    <div class="generator">
+      <div class="left-panel">
+        <div class="upload-box">
+          <label for="imgfile" class="upload-label">Upload Image</label>
+          <input id="imgfile" type="file" accept="image/*" />
+        </div>
+
+        <input id="topText" type="text" placeholder="Top Text" />
+        <input id="bottomText" type="text" placeholder="Bottom Text" />
+        <input id="fontSize" type="number" value="40" min="10" max="120" />
+        <select id="align">
+          <option value="center">Center</option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+
+        <select id="outline">
+          <option value="true">Black Outline</option>
+        </select>
+
+        <button id="genBtn" class="btn glow">Generate</button>
+        <button id="downloadBtn" class="btn secondary">Download</button>
+        <button id="clearBtn" class="btn danger">Clear</button>
+      </div>
+
+      <div class="right-panel">
+        <canvas id="memeCanvas" width="800" height="600"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <footer>Made with ❤️ by Blessings Meme Lab</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
